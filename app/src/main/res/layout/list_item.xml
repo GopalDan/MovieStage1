@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/movie_poster"
+        android:layout_width="135dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="5dp"/>
+
+    <TextView
+        android:id="@+id/movie_title"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:background="#212121"
+        tools:text = "Aquaman"
+        android:textColor="#FFFFFF"
+        android:paddingLeft="10dp"
+        android:textSize="16sp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_marginBottom="10dp" />
+
+</LinearLayout>
