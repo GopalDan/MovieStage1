@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#263238"
     tools:context="com.example.gopal.moviestage1.DetailsActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -61,15 +66,27 @@
             android:scaleType="centerCrop"
             android:layout_marginLeft="25dp"
             android:layout_below="@id/upper"/>
+        <TextView
+            android:id="@+id/overview_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/movie_poster"
+            android:textSize="18sp"
+            android:text="OVERVIEW"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp"/>
 
-    <TextView
-        android:id="@+id/movie_overview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/movie_poster"
-        android:textSize="14sp"
-        android:layout_marginLeft="15dp"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/movie_overview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/overview_header"
+            android:textSize="14sp"
+            android:layout_marginLeft="15dp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp"/>
 
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>

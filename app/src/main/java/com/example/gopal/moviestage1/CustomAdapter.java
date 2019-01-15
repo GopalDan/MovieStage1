@@ -48,8 +48,8 @@ public class CustomAdapter extends ArrayAdapter<Movie> {
         Picasso.get().load(imageUrl)
                 .into(moviePoster);
 
-        /*//Extracting image from Url by Glide library
-        Glide.with(getContext()).load(imageUrl)
+        //Extracting image from Url by Glide library
+        /*Glide.with(getContext()).load(imageUrl)
                 .into(moviePoster);*/
 
         return listItemView;

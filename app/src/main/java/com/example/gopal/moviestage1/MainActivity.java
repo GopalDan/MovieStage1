@@ -18,7 +18,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements android.app.LoaderManager.LoaderCallbacks<List<Movie>> {
 
 
-
+    String LOG_TAG = MainActivity.class.getSimpleName();
     private  String mUrl;
     CustomAdapter mCustomAdapter;
     ProgressBar mProgressbar;
@@ -33,12 +33,13 @@ public class MainActivity extends AppCompatActivity implements android.app.Loade
     public static final String MOVIE_OVERVIEW_KEY = "movieOverview";
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mProgressbar = findViewById(R.id.progress_bar);
-        Log.v("MainActivity","onCreate " );
+        Log.e(LOG_TAG, "ONCREATE ");
 
         setTitle("Movies");
 
@@ -121,4 +122,33 @@ public class MainActivity extends AppCompatActivity implements android.app.Loade
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.e(LOG_TAG, "ONSTART ");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.e(LOG_TAG, "ONRESUMEE ");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.e(LOG_TAG, "ONPAUSE ");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.e(LOG_TAG, "ONSTOP ");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.e(LOG_TAG, "ONDESTROY ");
+    }
 }

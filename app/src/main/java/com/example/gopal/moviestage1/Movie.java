@@ -11,7 +11,7 @@ public class Movie {
     private String mMovieRating;
     private String mMovieReleaseDate;
 
-    public Movie(String mMovieTitle, String mMoviePoster, String mMovieOverview, String mMovieRating, String mMovieReleaseDate) {
+    public Movie( String mMovieTitle, String mMoviePoster, String mMovieOverview, String mMovieRating, String mMovieReleaseDate) {
         this.mMovieTitle = mMovieTitle;
         this.mMoviePoster = mMoviePoster;
         this.mMovieOverview = mMovieOverview;

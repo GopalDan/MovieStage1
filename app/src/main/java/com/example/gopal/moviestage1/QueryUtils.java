@@ -36,13 +36,13 @@ public final class QueryUtils {
     /**
      * Query TMDb database and return a list of  {@link Movie} .
      */
-    public static List<Movie> fetchTrainData(String requestUrl) {
-        Log.e(LOG_TAG,"Fetching in called: ");
-       /* try {
-            Thread.sleep(2000);
+    public static List<Movie> fetchMovieData(String requestUrl) {
+        Log.e(LOG_TAG,"Fetching is called: ");
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }*/
+        }
 
         // Create URL object
         URL url = createUrl(requestUrl);
@@ -61,6 +61,7 @@ public final class QueryUtils {
         // Return the movie list
         return trains;
     }
+
     /**
      * Returns new URL object from the given string URL.
      */
@@ -162,7 +163,9 @@ public final class QueryUtils {
         } catch (JSONException e) {
             Log.e(LOG_TAG, "Problem parsing the earthquake JSON results", e);
         }
+        Log.e(LOG_TAG,"JSON Extraction is done here");
         return trains;
     }
+
 }
 

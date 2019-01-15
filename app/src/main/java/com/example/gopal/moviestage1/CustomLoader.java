@@ -31,8 +31,8 @@ public class CustomLoader extends AsyncTaskLoader<List<Movie>> {
         // Log.e(LOG_TAG,"loadInBackground is called: ");
 
         // Perform the network request, parse the response, and extract a list of movies.
-        Log.v("CustomLoader", "URL for data fetching- " + mUrl);
-        List<Movie> movies = QueryUtils.fetchTrainData(mUrl);
+        Log.e("CustomLoader", "URL for data fetching- " + mUrl);
+        List<Movie> movies = QueryUtils.fetchMovieData(mUrl);
         return movies;
     }
 }
